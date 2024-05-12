@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lora", serif;
+}
+
+/* Header */
+header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: transparent;
+    position: fixed; /* Fixed position for the navigation bar */
+    top: 0; /* Position it at the top */
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  nav {
+    transition: 0.3s ease;
+  }
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  nav ul li a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: #35343486;
+    font-weight: 100;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  nav ul li a:hover {
+    color: #63616141;
+  }
+  nav.show-nav {
+    display: block;
+  }
+  .logo {
+    background-color: #e6e6e6;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
+  .logo img {
+    height: 60px;
+    width: 60px;
+  }
+  .menu-toggle {
+    color: #000;
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Main content */
+  main {
+    width: 100%;
+    margin-top: 70px; /* Adjust the margin to make space for the fixed header */
+  }
+  
+  /* Hero section */
+  .hero-section {
+    margin-top: -70px; /* Offset for the fixed header */
+    position: relative; /* Position relative to contain z-index */
+    width: 100%;
+    height: 100vh;
+    background-color: transparent; /* Semi-transparent black background */
+    z-index: 2;
+  }
+  .hero-content img {
+    width: 500px;
+    height: auto;
+  }
+  .hero-content {
+    height: 100%;
+    width: 100%;
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-details{
+    background-color: transparent;
+    position: absolute;
+    color: #0000008a;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    top: 20%;
+    left: 10%;
+    height: auto;
+    width: 400px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    border-radius: 10px 0px 10px 0px;
+  }
+  .hero-details-2{
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    color: #0000008a;
+    font-size: 1.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    top: 20%;
+    right: 10%;
+    height: auto;
+    width: 400px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    border-radius: 10px 0px 10px 0px;
+ 
+  }
+  .hero-details-3 {
+    position: absolute;
+    display: flex;
+    color: #0000008a;
+    font-size: 1.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    bottom: 20%;
+    right: 10%;
+    height: auto;
+    width: 400px;
+    border-radius: 10px 0px 10px 0px;
+    background-color: transparent;
+}
+
+
+
+  .hero-details ul{
+    list-style-type: none;
+    padding: 10px;
+  }
+  .hero-details ul li{
+    padding: 5px;
+    font-size: 13px;
+    color: #000000f1;
+  }
+  .hero-bg{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+  }
+  .hero-bg div {
+    height: 100vh;
+    width: 100px; /* Initially set width to 0 */
+    background-color: rgba(161, 160, 160, 0.322);
+    transition: width 0.5s ease; /* Add transition for smooth animation */
+  }
+ 
+  .hero-content-title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(138, 136, 136);
+  }
+
+  .slider-controllers {
+    left: 20px;
+    position: absolute;
+    height: 100vh;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10%;
+    align-items: space-between;
+    z-index: 5;
+    
+  }
+  .slider-controllers button{
+    border: none;
+    background-color: transparent;
+    color: #131313;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: 100;
+    opacity: 0.5;
+  }
+  
+.demo-container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+}
+.demo-container .demo-left {
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.demo-container .demo-right {
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid #00000038;
+}
+.demo-left img {
+  height: auto;
+  width: 100%;
+}
+.demo-right img {
+  height: auto;
+  width: 100%;
+}
+.slider-container {
+  height: 500px;
+  width: 100%;
+  background-color: beige;
+}
+footer {
+  padding: 0px 20px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  nav ul {
+    display: block;
+  }
+  nav ul li {
+    margin-top: 10px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+@media (min-aspect-ratio: 16/9) {
+  .background-clip {
+    height: auto;
+    width: 100%;
+  }
+}
