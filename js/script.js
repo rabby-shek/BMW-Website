@@ -60,9 +60,8 @@ function animateDivs() {
     });
   }, 500); // Adjust timing to match the transition duration
 }
-
-window.addEventListener('scroll', function() {
-    var header = document.querySelector('header');
-    var scrolled = window.scrollY > 100; // Change 100 to whatever scroll position you prefer
-    header.classList.toggle('scrolled', scrolled);
-  });
+window.addEventListener("scroll", function () {
+  var header = document.querySelector("header");
+  var scrolled = window.scrollY > 100; // Change 100 to whatever scroll position you prefer
+  header.classList.toggle("scrolled", scrolled);
+});
